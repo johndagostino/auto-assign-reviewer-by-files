@@ -4,10 +4,10 @@
   "description": "Automatically assigns reviewers to PR based on changed files",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint index.js",
-    "lint:fix": "eslint index.js --fix",
-    "package": "ncc build index.js -o dist --minify",
-    "test": "eslint index.js && jest"
+    "lint": "eslint index.ts",
+    "lint:fix": "eslint index.ts --fix",
+    "package": "ncc build index.ts -o dist --minify",
+    "test": "eslint index.ts && jest"
   },
   "repository": {
     "type": "git",
@@ -32,10 +32,12 @@
     "yaml": "^1.10.2"
   },
   "devDependencies": {
-    "@zeit/ncc": "^0.22.3",
+    "@types/node": "^18.7.13",
+    "@vercel/ncc": "^0.34.0",
     "app-root-path": "^3.0.0",
     "eslint": "^7.29.0",
     "eslint-plugin-jest": "^23.20.0",
-    "jest": "^26.6.3"
+    "jest": "^26.6.3",
+    "typescript": "^4.8.2"
   }
 }

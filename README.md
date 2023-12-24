@@ -12,17 +12,21 @@ create configuration file
 
 ```yaml
 ---
-# you can use glob pattern
-"**/*.js":
-  - shufo
+addComment: true
+comment: 'Heads up! ${reviewers.join(',')} have been added as reviewers"
 
-".github/workflows/*.yml":
-  - shufo2
+matches:
+  # you can use glob pattern
+  "**/*.js":
+    - shufo
 
-# you can set multiple reviewers
-".github/**/*.yml":
-  - foo
-  - bar
+  ".github/workflows/*.yml":
+    - shufo2
+
+  # you can set multiple reviewers
+  ".github/**/*.yml":
+    - foo
+    - bar
 ```
 
 Glob matching is based on the [minimatch library](https://github.com/isaacs/minimatch).
